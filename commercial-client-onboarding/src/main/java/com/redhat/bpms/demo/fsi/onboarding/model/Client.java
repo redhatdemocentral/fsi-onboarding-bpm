@@ -29,7 +29,7 @@ public class Client implements java.io.Serializable
    private java.lang.String bic;
 
    @org.kie.api.definition.type.Label("Related Parties")
-   @javax.persistence.OneToMany(cascade = { javax.persistence.CascadeType.ALL }, fetch = javax.persistence.FetchType.EAGER)
+   @javax.persistence.OneToMany(cascade = { javax.persistence.CascadeType.ALL }, mappedBy = "client", fetch = javax.persistence.FetchType.EAGER, orphanRemoval = false)
    private java.util.List<com.redhat.bpms.demo.fsi.onboarding.model.RelatedParty> relatedParties;
 
    public Client()

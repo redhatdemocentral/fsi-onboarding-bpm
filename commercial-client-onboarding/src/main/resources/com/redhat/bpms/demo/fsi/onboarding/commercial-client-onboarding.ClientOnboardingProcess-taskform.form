@@ -31,14 +31,7 @@
 <property name="outputBinding" value="client/name"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
-<field position="4" name="client_relatedParties" bag-type="com.redhat.bpms.demo.fsi.onboarding.model.RelatedParty" type="MultipleSubform" id="1171129648">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;relatedParties (client)quot;"/>
-<property name="readonly" value="false"/>
-<property name="outputBinding" value="client/relatedParties"/>
-<property name="fieldClass" value="java.util.List"/>
-</field>
-<field position="5" name="client_type" type="InputText" id="1248382375">
+<field position="4" name="client_type" type="InputText" id="1248382375">
 <property name="fieldRequired" value="false"/>
 <property name="label" value="quot;enquot;,quot;type (client)quot;"/>
 <property name="readonly" value="false"/>

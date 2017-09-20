@@ -16,12 +16,16 @@ public class RelatedParty implements java.io.Serializable
    @javax.persistence.SequenceGenerator(sequenceName = "RELATEDPARTY_ID_SEQ", name = "RELATEDPARTY_ID_GENERATOR")
    private java.lang.Long id;
 
-   @org.kie.api.definition.type.Label(value = "Relationship")
+   @org.kie.api.definition.type.Label("Relationship")
    private java.lang.String relationship;
 
    @javax.persistence.ManyToOne(cascade = { javax.persistence.CascadeType.ALL }, fetch = javax.persistence.FetchType.EAGER)
-   @org.kie.api.definition.type.Label(value = "Party")
+   @org.kie.api.definition.type.Label("Party")
    private com.redhat.bpms.demo.fsi.onboarding.model.Party party;
+
+   @javax.persistence.ManyToOne(cascade = { javax.persistence.CascadeType.ALL }, fetch = javax.persistence.FetchType.EAGER, optional = false)
+   @org.kie.api.definition.type.Label(value = "Client")
+   private com.redhat.bpms.demo.fsi.onboarding.model.Client client;
 
    public RelatedParty()
    {
@@ -57,12 +61,24 @@ public class RelatedParty implements java.io.Serializable
       this.party = party;
    }
 
+   public com.redhat.bpms.demo.fsi.onboarding.model.Client getClient()
+   {
+      return this.client;
+   }
+
+   public void setClient(com.redhat.bpms.demo.fsi.onboarding.model.Client client)
+   {
+      this.client = client;
+   }
+
    public RelatedParty(java.lang.Long id, java.lang.String relationship,
-         com.redhat.bpms.demo.fsi.onboarding.model.Party party)
+         com.redhat.bpms.demo.fsi.onboarding.model.Party party,
+         com.redhat.bpms.demo.fsi.onboarding.model.Client client)
    {
       this.id = id;
       this.relationship = relationship;
       this.party = party;
+      this.client = client;
    }
 
 }

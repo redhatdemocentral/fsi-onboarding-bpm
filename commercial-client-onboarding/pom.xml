@@ -18,7 +18,7 @@
 			<!-- JBoss EAP 7 BOM -->
 			<dependency>
 				<groupId>org.jboss.bom</groupId>
-				<artifactId> jboss-eap-javaee7</artifactId>
+				<artifactId>jboss-eap-javaee7</artifactId>
 				<version>${version.org.jboss.eap}</version>
 				<type>pom</type>
 				<scope>import</scope>

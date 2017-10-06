@@ -14,7 +14,14 @@
     </marshalling-strategies>
     <event-listeners/>
     <task-event-listeners/>
-    <globals/>
+    <globals>
+        <global>
+            <resolver>Enter resolver type</resolver>
+            <identifier>Enter value</identifier>
+            <parameters/>
+            <name></name>
+        </global>
+    </globals>
     <work-item-handlers>
         <work-item-handler>
             <resolver>mvel</resolver>
@@ -33,6 +40,12 @@
             <identifier>new org.jbpm.process.workitem.webservice.WebServiceWorkItemHandler(ksession, classLoader)</identifier>
             <parameters/>
             <name>WebService</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new org.jbpm.process.workitem.email.EmailWorkItemHandler("smtp.gmail.com", "587", "jbossdemocentral@gmail.com", "rbantztpqywjyajj", "true")</identifier>
+            <parameters/>
+            <name>Email</name>
         </work-item-handler>
         <work-item-handler>
             <resolver>mvel</resolver>

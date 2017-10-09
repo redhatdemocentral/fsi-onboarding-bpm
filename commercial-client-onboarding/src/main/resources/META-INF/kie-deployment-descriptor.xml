@@ -14,14 +14,7 @@
     </marshalling-strategies>
     <event-listeners/>
     <task-event-listeners/>
-    <globals>
-        <global>
-            <resolver>Enter resolver type</resolver>
-            <identifier>Enter value</identifier>
-            <parameters/>
-            <name></name>
-        </global>
-    </globals>
+    <globals/>
     <work-item-handlers>
         <work-item-handler>
             <resolver>mvel</resolver>

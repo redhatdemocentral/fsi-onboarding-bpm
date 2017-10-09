@@ -5,28 +5,34 @@ package com.redhat.bpms.demo.fsi.onboarding.model;
  */
 
 @javax.persistence.Entity
-public class Address implements java.io.Serializable {
+@javax.persistence.Table(name = "Address")
+public class Address implements java.io.Serializable
+{
 
-    static final long serialVersionUID = 1L;
+   static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "ADDRESS_ID_GENERATOR")
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(sequenceName = "ADDRESS_ID_SEQ", name = "ADDRESS_ID_GENERATOR")
-    private java.lang.Long id;
+   @javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "ADDRESS_ID_GENERATOR")
+   @javax.persistence.Id
+   @javax.persistence.SequenceGenerator(sequenceName = "ADDRESS_ID_SEQ", name = "ADDRESS_ID_GENERATOR")
+   private java.lang.Long id;
 
-    public Address() {
-    }
-    
-    public Address(java.lang.Long id) {
-        this.id = id;
-    }
+   public Address()
+   {
+   }
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+   public java.lang.Long getId()
+   {
+      return this.id;
+   }
+
+   public void setId(java.lang.Long id)
+   {
+      this.id = id;
+   }
+
+   public Address(java.lang.Long id)
+   {
+      this.id = id;
+   }
 
 }

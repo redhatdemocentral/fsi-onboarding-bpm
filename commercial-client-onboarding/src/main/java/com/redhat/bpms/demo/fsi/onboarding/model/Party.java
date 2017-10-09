@@ -16,17 +16,20 @@ public class Party implements java.io.Serializable
    @javax.persistence.SequenceGenerator(sequenceName = "PARTY_ID_SEQ", name = "PARTY_ID_GENERATOR")
    private java.lang.Long id;
 
-   @org.kie.api.definition.type.Label(value = "Name")
+   @org.kie.api.definition.type.Label("Name")
    private java.lang.String name;
 
-   @org.kie.api.definition.type.Label(value = "Surname")
+   @org.kie.api.definition.type.Label("Surname")
    private java.lang.String surname;
 
-   @org.kie.api.definition.type.Label(value = "Date of Birth")
+   @org.kie.api.definition.type.Label("Date of Birth")
    private java.util.Date dateOfBirth;
 
-   @org.kie.api.definition.type.Label(value = "Social Security Number")
+   @org.kie.api.definition.type.Label("Social Security Number")
    private java.lang.String ssn;
+
+   @org.kie.api.definition.type.Label(value = "Email")
+   private java.lang.String email;
 
    public Party()
    {
@@ -82,15 +85,26 @@ public class Party implements java.io.Serializable
       this.ssn = ssn;
    }
 
+   public java.lang.String getEmail()
+   {
+      return this.email;
+   }
+
+   public void setEmail(java.lang.String email)
+   {
+      this.email = email;
+   }
+
    public Party(java.lang.Long id, java.lang.String name,
          java.lang.String surname, java.util.Date dateOfBirth,
-         java.lang.String ssn)
+         java.lang.String ssn, java.lang.String email)
    {
       this.id = id;
       this.name = name;
       this.surname = surname;
       this.dateOfBirth = dateOfBirth;
       this.ssn = ssn;
+      this.email = email;
    }
 
 }

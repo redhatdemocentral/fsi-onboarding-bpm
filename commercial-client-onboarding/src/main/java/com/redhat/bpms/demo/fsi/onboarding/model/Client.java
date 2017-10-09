@@ -32,6 +32,13 @@ public class Client implements java.io.Serializable
    @javax.persistence.OneToMany(cascade = { javax.persistence.CascadeType.ALL }, fetch = javax.persistence.FetchType.EAGER, orphanRemoval = false)
    private java.util.List<com.redhat.bpms.demo.fsi.onboarding.model.RelatedParty> relatedParties;
 
+   @javax.persistence.ManyToOne(cascade = { javax.persistence.CascadeType.ALL }, fetch = javax.persistence.FetchType.EAGER)
+   @org.kie.api.definition.type.Label(value = "Address")
+   private com.redhat.bpms.demo.fsi.onboarding.model.Address address;
+
+   @org.kie.api.definition.type.Label(value = "Phone Number")
+   private java.lang.String phoneNumber;
+
    public Client()
    {
    }
@@ -97,13 +104,35 @@ public class Client implements java.io.Serializable
       this.relatedParties = relatedParties;
    }
 
+   public com.redhat.bpms.demo.fsi.onboarding.model.Address getAddress()
+   {
+      return this.address;
+   }
+
+   public void setAddress(com.redhat.bpms.demo.fsi.onboarding.model.Address address)
+   {
+      this.address = address;
+   }
+
+   public java.lang.String getPhoneNumber()
+   {
+      return this.phoneNumber;
+   }
+
+   public void setPhoneNumber(java.lang.String phoneNumber)
+   {
+      this.phoneNumber = phoneNumber;
+   }
+
    public Client(
          java.lang.Long id,
          java.lang.String name,
          java.lang.String country,
          java.lang.String type,
          java.lang.String bic,
-         java.util.List<com.redhat.bpms.demo.fsi.onboarding.model.RelatedParty> relatedParties)
+         java.util.List<com.redhat.bpms.demo.fsi.onboarding.model.RelatedParty> relatedParties,
+         com.redhat.bpms.demo.fsi.onboarding.model.Address address,
+         java.lang.String phoneNumber)
    {
       this.id = id;
       this.name = name;
@@ -111,6 +140,8 @@ public class Client implements java.io.Serializable
       this.type = type;
       this.bic = bic;
       this.relatedParties = relatedParties;
+      this.address = address;
+      this.phoneNumber = phoneNumber;
    }
 
 }

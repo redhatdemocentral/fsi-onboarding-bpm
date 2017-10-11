@@ -12,8 +12,8 @@
             <parameters/>
         </marshalling-strategy>
         <marshalling-strategy>
-            <resolver>mvel</resolver>
-            <identifier>new com.redhat.bpms.demo.fsi.onboarding.marshalling.DocumentsMarshallingStrategy()</identifier>
+            <resolver>reflection</resolver>
+            <identifier>com.redhat.bpms.demo.fsi.onboarding.marshalling.DocumentsMarshallingStrategy</identifier>
             <parameters/>
         </marshalling-strategy>
     </marshalling-strategies>

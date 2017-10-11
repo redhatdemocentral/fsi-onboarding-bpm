@@ -34,6 +34,12 @@
 			<version>${version.org.kie}</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-document</artifactId>
+			<version>${version.org.kie}</version>
+			<scope>provided</scope>
+		</dependency>
 	
 		<!-- Java EE -->
 		<dependency>

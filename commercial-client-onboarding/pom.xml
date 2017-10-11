@@ -38,6 +38,12 @@
 			<artifactId>jbpm-document</artifactId>
 			<version>${version.org.kie}</version>
 			<scope>compile</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.drools</groupId>
+					<artifactId>drools-core</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	
 		<!-- Java EE -->

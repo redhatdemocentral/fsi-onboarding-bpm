@@ -71,6 +71,9 @@
       <org.drools.workbench.models.datamodel.imports.Import>
         <type>com.redhat.bpms.demo.fsi.onboarding.model.Client</type>
       </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.redhat.bpms.demo.fsi.onboarding.model.RequiredDocuments</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
     </imports>
   </imports>
   <packageName>com.redhat.bpms.demo.fsi.onboarding</packageName>
@@ -90,6 +93,24 @@
       </value>
       <value>
         <valueString>BIG_BUSINESS</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+    </list>
+    <list>
+      <value>
+        <valueNumeric class="int">2</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>

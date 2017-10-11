@@ -71,7 +71,7 @@
       <header>Add Required Documents</header>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>$reqDocs.add(&quot;@{doc}&quot;)</text>
+          <text>$reqDocs.addDocument(&quot;@{doc}&quot;)</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>

@@ -32,6 +32,7 @@
 			<artifactId>kie-api</artifactId>
 			<version>${version.org.kie}</version>
 			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.jbpm</groupId>
@@ -43,7 +44,17 @@
 					<groupId>org.drools</groupId>
 					<artifactId>drools-core</artifactId>
 				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-core</artifactId>
+			<version>${version.org.kie}</version>
+			<scope>provided</scope>
 		</dependency>
 	
 		<!-- Java EE -->

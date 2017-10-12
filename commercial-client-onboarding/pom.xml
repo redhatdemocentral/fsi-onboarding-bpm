@@ -43,18 +43,10 @@
 			<scope>provided</scope>
 			-->
 			<exclusions>
-				<exclusion>
-					<groupId>org.kie</groupId>
-					<artifactId>kie-api</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.drools</groupId>
-					<artifactId>drools-core</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-api</artifactId>
-				</exclusion>
+			  <exclusion>
+			      <groupId>*</groupId>
+			      <artifactId>*</artifactId>
+			  </exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>

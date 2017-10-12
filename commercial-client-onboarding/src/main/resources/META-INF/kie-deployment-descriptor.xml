@@ -11,11 +11,6 @@
             <identifier>new org.drools.persistence.jpa.marshaller.JPAPlaceholderResolverStrategy("client-onboarding", classLoader)</identifier>
             <parameters/>
         </marshalling-strategy>
-        <marshalling-strategy>
-            <resolver>mvel</resolver>
-            <identifier>new com.redhat.bpms.demo.fsi.onboarding.marshalling.DocumentsMarshallingStrategy(new org.jbpm.document.marshalling.DocumentMarshallingStrategy())</identifier>
-            <parameters/>
-        </marshalling-strategy>
     </marshalling-strategies>
     <event-listeners/>
     <task-event-listeners/>

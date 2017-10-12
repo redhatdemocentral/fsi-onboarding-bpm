@@ -39,14 +39,19 @@
 			<artifactId>jbpm-document</artifactId>
 			<version>${version.org.kie}</version>
 			<scope>compile</scope>
-			<!--
-			<scope>provided</scope>
-			-->
 			<exclusions>
-			  <exclusion>
-			      <groupId>*</groupId>
-			      <artifactId>*</artifactId>
-			  </exclusion>
+				<exclusion>
+					<groupId>org.kie</groupId>
+					<artifactId>kie-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.drools</groupId>
+					<artifactId>drools-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>

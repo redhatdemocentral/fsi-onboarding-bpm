@@ -36,7 +36,7 @@ public class DocumentsMarshallingStrategy implements ObjectMarshallingStrategy {
 		//Write the number of documents in the list.
 		oos.writeInt(documents.getDocuments().size());
 		for (Document nextDocument: documents.getDocuments()) {
-			//Use the DocumentMarshallingStrategy to marshall individual documents.
+			//Use the DocumentMarshallingStrategy to marshal individual documents.
 			byte[] nextMarshalledDocument = docMarshallingStrategy.marshal(ctx, objectOutputStream, nextDocument);
 			oos.writeInt(nextMarshalledDocument.length);
 			oos.write(nextMarshalledDocument);
@@ -51,13 +51,13 @@ public class DocumentsMarshallingStrategy implements ObjectMarshallingStrategy {
 			throws IOException, ClassNotFoundException {
 		
 		DroolsObjectInputStream is = new DroolsObjectInputStream(new ByteArrayInputStream(object), classLoader);
-		// first we read out the object class and size of the list we stored.
+		// first we read the size of the list we've stored.
 		int size = is.readInt();
 		
 		Documents documents = new Documents();
 		
 		for (int i = 0; i < size; i++) {
-			//Use the DocumentMarshallingStrategy to unmarshall the individual documents.
+			//Use the DocumentMarshallingStrategy to unmarshal the individual documents.
 			int length = is.readInt();
 			byte[] marshalledDocument = new byte[length];
 			is.readFully(marshalledDocument);

@@ -21,9 +21,6 @@ public class EmailBodyBuilder {
 		return "This is the email body for process-id: '" + bodyContext.getKcontext().getProcessInstance().getId() + "' and client: '" 
 				+ bodyContext.getClient().getName() + "'.";
 	
-
 	}
-
-	
 
 }

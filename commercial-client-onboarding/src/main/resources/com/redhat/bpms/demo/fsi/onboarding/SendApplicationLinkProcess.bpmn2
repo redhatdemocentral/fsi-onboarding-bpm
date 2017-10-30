@@ -65,6 +65,7 @@ kcontext.setVariable("emailBodyContext", new com.redhat.bpms.demo.fsi.onboarding
       <bpmn2:dataInputAssociation id="_GRCEiL1sEeeQgOqFbWUc2g">
         <bpmn2:sourceRef>emailBodyContext</bpmn2:sourceRef>
         <bpmn2:targetRef>_D2A72F71-E121-49A9-8DE9-B8BDAA798A73_BodyInputX</bpmn2:targetRef>
+       	<bpmn2:transformation language="http://www.mvel.org/2.0">com.redhat.bpms.demo.fsi.onboarding.transformer.EmailBodyBuilder.buildEmailBody(Body)</bpmn2:transformation>
       </bpmn2:dataInputAssociation>
       <bpmn2:dataInputAssociation id="_GRCEib1sEeeQgOqFbWUc2g">
         <bpmn2:targetRef>_D2A72F71-E121-49A9-8DE9-B8BDAA798A73_FromInputX</bpmn2:targetRef>

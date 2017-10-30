@@ -54,11 +54,7 @@ public class SendApplicationLinkProcessTest extends JbpmJUnitBaseTestCase {
 		Map<String, Object> params = new HashMap<>();
 		Client client = getClient();
 		params.put("client", client);
-		params.put("emailTemplateId", "This is a simple template.");
-		/*
-		EmailBodyContext emailBodyContext = new EmailBodyContext(null, client);
-		params.put("emailBodyContext", emailBodyContext);
-		*/
+
 		kieSession.startProcess(SEND_APPLICATION_LINK_PROCESS_ID, params);
 		
 		disposeRuntimeManager();

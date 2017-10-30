@@ -15,7 +15,6 @@ import org.kie.api.runtime.manager.RuntimeManager;
 import org.kie.internal.runtime.manager.context.EmptyContext;
 
 import com.redhat.bpms.demo.fsi.onboarding.model.Client;
-import com.redhat.bpms.demo.fsi.onboarding.model.EmailBodyContext;
 import com.redhat.bpms.demo.fsi.onboarding.model.Party;
 import com.redhat.bpms.demo.fsi.onboarding.model.RelatedParty;
 

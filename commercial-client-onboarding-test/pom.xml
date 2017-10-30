@@ -5,8 +5,8 @@
 	<groupId>com.redhat.bpms.demo.fsi</groupId>
 	<artifactId>commercial-client-onboarding-test</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<packaging>kjar</packaging>
-	<name>commercial-client-onboarding</name>
+	<packaging>jar</packaging>
+	<name>commercial-client-onboarding-test</name>
 	<description>Commercial Client Onboarding Test</description>
 	<properties>
 		<version.org.jboss.eap>7.0.0.GA</version.org.jboss.eap>
@@ -63,12 +63,12 @@
 		</dependency>
 		 -->
 		 <!-- Project Dependencies -->
-		 <depedency>
+		 <dependency>
 		 	<groupId>${project.groupId}</groupId>
 		 	<artifactId>commercial-client-onboarding</artifactId>
 		 	<version>${project.version}</version>
 		 	<scope>test</scope>
-		 </depedency>
+		 </dependency>
 		
 		<!-- Test -->
 		<dependency>
@@ -104,12 +104,6 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.kie</groupId>
-				<artifactId>kie-maven-plugin</artifactId>
-				<version>6.5.0.Final-redhat-2</version>
-				<extensions>true</extensions>
 			</plugin>
 		</plugins>
 	</build>

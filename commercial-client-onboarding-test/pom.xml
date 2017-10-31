@@ -11,6 +11,7 @@
 	<properties>
 		<version.org.jboss.eap>7.0.0.GA</version.org.jboss.eap>
 		<version.org.kie>6.5.0.Final-redhat-15</version.org.kie>
+		<version.org.freemarker>2.3.19</version.org.freemarker>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -81,6 +82,12 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${version.org.freemarker}</version>
 			<scope>test</scope>
 		</dependency>
 		

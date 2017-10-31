@@ -7,10 +7,13 @@ public class EmailBodyContext {
 	private final ProcessContext kcontext;
 	
 	private final Client client;
+	
+	private final String  accountManager;
 
-	public EmailBodyContext(final ProcessContext kcontext, final Client client) { 
+	public EmailBodyContext(final ProcessContext kcontext, final Client client, final String accountManager) { 
 		this.kcontext = kcontext;
 		this.client = client;
+		this.accountManager = accountManager;
 	}
 
 	public ProcessContext getKcontext() {
@@ -19,6 +22,10 @@ public class EmailBodyContext {
 	
 	public Client getClient() {
 		return client;
+	}
+	
+	public String getAccountManager() {
+		return accountManager;
 	}
 
 }

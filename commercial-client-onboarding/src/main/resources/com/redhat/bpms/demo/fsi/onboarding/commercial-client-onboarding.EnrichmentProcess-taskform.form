@@ -1,0 +1,103 @@
+
+<form id="128549789">
+<property name="name" value="commercial-client-onboarding.EnrichmentProcess-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="8" name="client_type" type="InputText" id="1039099375">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;type (client)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="client/type"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="2" name="client_bic" type="InputText" id="1165057426">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;bic (client)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="client/bic"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="12" name="uploadedDocumentsCollection" type="MultipleInput" id="524874667">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;uploadedDocumentsCollection (uploadedDocumentsCollection)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="uploadedDocumentsCollection"/>
+<property name="fieldClass" value="java.util.List"/>
+</field>
+<field position="7" name="client_relatedParties" bag-type="com.redhat.bpms.demo.fsi.onboarding.model.RelatedParty" type="MultipleSubform" id="1439323917">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;relatedParties (client)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="client/relatedParties"/>
+<property name="fieldClass" value="java.util.List"/>
+</field>
+<field position="3" name="client_country" type="InputText" id="1835377645">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;country (client)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="client/country"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="5" name="client_name" type="InputText" id="1858703233">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;name (client)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="client/name"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="4" name="client_id" type="InputTextLong" id="819723401">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;id (client)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="client/id"/>
+<property name="fieldClass" value="java.lang.Long"/>
+</field>
+<field position="9" name="documents_documents" bag-type="org.jbpm.document.Document" type="MultipleInput" id="571482853">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;documents (documents)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="documents/documents"/>
+<property name="fieldClass" value="java.util.List"/>
+</field>
+<field position="10" name="reqiuredDocuments_requiredDocs" bag-type="java.lang.String" type="MultipleInput" id="2006475201">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;requiredDocs (reqiuredDocuments)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="reqiuredDocuments/requiredDocs"/>
+<property name="fieldClass" value="java.util.List"/>
+</field>
+<field position="0" name="accountName" type="InputText" id="908809489">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;accountName (accountName)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="accountName"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="11" name="requiredDocumentsCollection" type="MultipleInput" id="1695268055">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;requiredDocumentsCollection (requiredDocumentsCollection)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="requiredDocumentsCollection"/>
+<property name="fieldClass" value="java.util.List"/>
+</field>
+<field position="6" name="client_phoneNumber" type="InputText" id="394678971">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;phoneNumber (client)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="client/phoneNumber"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="1" name="client_address" type="Subform" id="1553082541">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;address (client)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="client/address"/>
+<property name="fieldClass" value="java.lang.Object"/>
+</field>
+<dataHolder inputId="" name="#FF54A7" type="basicType" outId="accountName" value="java.lang.String" id="accountName"/>
+<dataHolder inputId="" name="#E9E371" type="dataModelerEntry" outId="client" value="com.redhat.bpms.demo.fsi.onboarding.model.Client" id="client"/>
+<dataHolder inputId="" name="#9BCAFA" type="dataModelerEntry" outId="documents" value="com.redhat.bpms.demo.fsi.onboarding.model.Documents" id="documents"/>
+<dataHolder inputId="" name="#BBBBBB" type="dataModelerEntry" outId="reqiuredDocuments" value="com.redhat.bpms.demo.fsi.onboarding.model.RequiredDocuments" id="reqiuredDocuments"/>
+<dataHolder inputId="" name="#B29FE4" type="basicType" outId="requiredDocumentsCollection" value="java.util.List" id="requiredDocumentsCollection"/>
+<dataHolder inputId="" name="#FBB767" type="basicType" outId="uploadedDocumentsCollection" value="java.util.List" id="uploadedDocumentsCollection"/>
+</form>

@@ -33,11 +33,14 @@ public class Client implements java.io.Serializable
    private java.util.List<com.redhat.bpms.demo.fsi.onboarding.model.RelatedParty> relatedParties;
 
    @javax.persistence.ManyToOne(cascade = { javax.persistence.CascadeType.ALL }, fetch = javax.persistence.FetchType.EAGER)
-   @org.kie.api.definition.type.Label(value = "Address")
+   @org.kie.api.definition.type.Label("Address")
    private com.redhat.bpms.demo.fsi.onboarding.model.Address address;
 
-   @org.kie.api.definition.type.Label(value = "Phone Number")
+   @org.kie.api.definition.type.Label("Phone Number")
    private java.lang.String phoneNumber;
+
+   @org.kie.api.definition.type.Label(value = "Credit Score")
+   private java.lang.Integer creditScore;
 
    public Client()
    {
@@ -124,6 +127,16 @@ public class Client implements java.io.Serializable
       this.phoneNumber = phoneNumber;
    }
 
+   public java.lang.Integer getCreditScore()
+   {
+      return this.creditScore;
+   }
+
+   public void setCreditScore(java.lang.Integer creditScore)
+   {
+      this.creditScore = creditScore;
+   }
+
    public Client(
          java.lang.Long id,
          java.lang.String name,
@@ -132,7 +145,7 @@ public class Client implements java.io.Serializable
          java.lang.String bic,
          java.util.List<com.redhat.bpms.demo.fsi.onboarding.model.RelatedParty> relatedParties,
          com.redhat.bpms.demo.fsi.onboarding.model.Address address,
-         java.lang.String phoneNumber)
+         java.lang.String phoneNumber, java.lang.Integer creditScore)
    {
       this.id = id;
       this.name = name;
@@ -142,6 +155,7 @@ public class Client implements java.io.Serializable
       this.relatedParties = relatedParties;
       this.address = address;
       this.phoneNumber = phoneNumber;
+      this.creditScore = creditScore;
    }
 
 }

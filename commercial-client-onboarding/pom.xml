@@ -61,6 +61,12 @@
 			<version>${version.org.kie}</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-persistence-jpa</artifactId>
+			<version>${version.org.kie}</version>
+			<scope>provided</scope>
+		</dependency>
 	
 		<!-- Java EE -->
 		<dependency>

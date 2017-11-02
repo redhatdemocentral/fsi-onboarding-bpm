@@ -37,7 +37,6 @@ public class DocumentsMarshallingStrategyTest {
 		assertEquals(unmarshalledDocumentsList.get(1).getLink(), docs.getDocuments().get(1).getLink());
 	}
 	
-	
 	@Test
 	public void testSingleDocMarshalUnmarshal() throws IOException, ClassNotFoundException {
 		DocumentMarshallingStrategy docMarshallingStrategy = new DocumentMarshallingStrategy();
@@ -47,6 +46,16 @@ public class DocumentsMarshallingStrategyTest {
 	
 		assertEquals(document.getName(), unmarshalledDocument.getName());
 		assertEquals(document.getLink(), unmarshalledDocument.getLink());
+	}
+	
+	@Test
+	public void testNoDocumentsMarshallUnmarshall() throws IOException, ClassNotFoundException {
+		Documents docs = new Documents();
+		
+		byte[] marshalledDocuments = docsMarshallingStrategy.marshal(null, null, docs);
+		Documents unmarshalledDocuments = (Documents) docsMarshallingStrategy.unmarshal(null, null, marshalledDocuments, this.getClass().getClassLoader());
+	
+		assertEquals(docs.getDocuments().size(), unmarshalledDocuments.getDocuments().size());
 		
 	}
 	

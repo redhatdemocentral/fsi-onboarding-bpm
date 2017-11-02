@@ -7,6 +7,7 @@
         <class>com.redhat.bpms.demo.fsi.onboarding.model.Party</class>
         <class>com.redhat.bpms.demo.fsi.onboarding.model.RelatedParty</class>
         <class>com.redhat.bpms.demo.fsi.onboarding.model.Address</class>
+        <class>org.drools.persistence.jpa.marshaller.MappedVariable</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>

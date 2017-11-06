@@ -23,7 +23,7 @@ public class EmailBodyBuilder {
 
 	private static final Configuration cfg = getFreemarkerConfiguration();
 
-	private static final String EMAIL_TEMPLATE_NAME = "email-template-inline-css.ftl";
+	private static final String EMAIL_TEMPLATE_NAME = "email-template.ftl";
 
 	public static String buildEmailBody(EmailBodyContext bodyContext) {
 		Template template;

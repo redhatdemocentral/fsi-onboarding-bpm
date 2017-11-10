@@ -15,7 +15,7 @@
     <div class="emt-panel emt-panel-central" style="background: #ffffff; text-align: center; margin: 40px 40px; padding-top: 1px; color: #999999;">
       <div class="emt-internal-panel" style="border: 1px solid #999999; color: #002235; margin: 30px; border-radius: 10px; box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.35); text-align: center; justify-content: space-around; min-height: 300px; padding: 25px;"><img src="http://cdn.entando.com/shield2.png" />
         <div class="logo-name" style="font-size: 30px; margin-bottom: 1em;"><b>FORTRESS - </b><span>Bank &amp; Loan</span></div>
-        <a class="btn-sign-in" style="text-align: center; width: 150px; padding: 1em; height: 40px; background: #0088ce; color: #ffffff; text-decoration: none;">Sign in</a></div>
+        <a class="btn-sign-in" style="text-align: center; width: 150px; padding: 1em; height: 40px; background: #0088ce; color: #ffffff; text-decoration: none;" href="${url}">Sign in</a></div>
       <div class="emt-panel-bottom" style="padding: 10px 30px;">
         <p style="text-align: left;">Our company lorem ipsum agile frameworks to provide a robust synopsis for high level overview.</p>
         <p style="text-align: left;">+43273847534</p>

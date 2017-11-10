@@ -87,13 +87,13 @@ public class EmailBodyBuilderTest {
 					@Override
 					public long getParentProcessInstanceId() {
 						// TODO Auto-generated method stub
-						return 0;
+						return 1;
 					}
 					
 					@Override
 					public long getId() {
 						// TODO Auto-generated method stub
-						return 0;
+						return 2;
 					}
 				};
 			}

@@ -25,3 +25,6 @@ pwd
 echo " -----> Contents of the current working directory after build run."
 
 ls -R .
+
+echo " -----> Copy the additional libraries to KIE-Server."
+cp $S2I_SOURCE_PATH/.s2i/contrib/client-onboarding-query-mapper-1.0.0-SNAPSHOT.jar $JBOSS_HOME/standalone/kie-server.war/WEB-INF/lib/client-onboarding-query-mapper-1.0.0-SNAPSHOT.jar

@@ -28,3 +28,4 @@ ls -R .
 
 echo " -----> Copy the additional libraries to KIE-Server."
 cp $S2I_SOURCE_PATH/.s2i/contrib/client-onboarding-query-mapper-1.0.0-SNAPSHOT.jar $JBOSS_HOME/standalone/deployments/kie-server.war/WEB-INF/lib/client-onboarding-query-mapper-1.0.0-SNAPSHOT.jar
+cp $S2I_SOURCE_PATH/.s2i/contrib/kie-server-services-advanced-query-registration-6.5.0.Final-redhat-15.jar $JBOSS_HOME/standalone/deployments/kie-server.war/WEB-INF/lib/kie-server-services-advanced-query-registration-6.5.0.Final-redhat-15.jar

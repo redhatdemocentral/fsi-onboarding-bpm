@@ -5,6 +5,8 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.redhat.bpms.demo.fsi.onboarding.config.Environment;
+import com.redhat.bpms.demo.fsi.onboarding.config.EnvironmentProducer;
 import com.redhat.bpms.demo.fsi.onboarding.model.EmailBodyContext;
 
 import freemarker.template.Configuration;
@@ -23,10 +25,8 @@ public class EmailBodyBuilder {
 
 	private static final String EMAIL_TEMPLATE_NAME = "email-template.ftl";
 	
-	private static final String ENTANDO_URL_PROPERTY_NAME = "fsi.demo.entando.customer.url";
+	private static final Environment environment = EnvironmentProducer.getEnvironment();
 	
-	private static final String BASE_URL = System.getProperty(ENTANDO_URL_PROPERTY_NAME, "http://fsi-customer.serv.run/fsi-customer/");
-
 	public static String buildEmailBody(EmailBodyContext bodyContext) {
 		Template template;
 		try {
@@ -45,7 +45,7 @@ public class EmailBodyBuilder {
 			String client = bodyContext.getClient().getName();
 			
 			Map<String, Object> mapper = getFreemarkerPlaceholderValues(processInstanceId, parentProcessInstanceId,
-					accountManager, client);
+					accountManager, client,  buildUrl(parentProcessInstanceId));
 			template.process(mapper, writer);
 		} catch (TemplateException | IOException e) {
 			String message = "Unable to transform email body.";
@@ -63,18 +63,18 @@ public class EmailBodyBuilder {
 		return cfg;
 	}
 
-	private static Map<String, Object> getFreemarkerPlaceholderValues(long processInstanceId, long parentProcessInstanceId, String accountManager, String clientName) {
+	private static Map<String, Object> getFreemarkerPlaceholderValues(long processInstanceId, long parentProcessInstanceId, String accountManager, String clientName, String entandoUrl) {
 		Map<String, Object> map = new HashMap<>();
 		map.put("processInstanceId", String.valueOf(processInstanceId));
 		map.put("parentProcessInstanceId", String.valueOf(parentProcessInstanceId));
 		map.put("accoutManager", accountManager);
 		map.put("client", clientName);
-		map.put("url", buildUrl(parentProcessInstanceId));
+		map.put("url", entandoUrl);
 		return map;
 	}
 	
 	private static String buildUrl(long id) { 
-		return BASE_URL + "en/applicant?pid=" + id;
+		return environment.getEntandoBaseUrl() + "en/applicant?pid=" + id;
 	}
 
 }

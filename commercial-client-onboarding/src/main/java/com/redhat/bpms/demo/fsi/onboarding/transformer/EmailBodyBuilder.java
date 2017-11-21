@@ -2,12 +2,15 @@ package com.redhat.bpms.demo.fsi.onboarding.transformer;
 
 import java.io.IOException;
 import java.io.StringWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
 import com.redhat.bpms.demo.fsi.onboarding.config.Environment;
 import com.redhat.bpms.demo.fsi.onboarding.config.EnvironmentProducer;
 import com.redhat.bpms.demo.fsi.onboarding.model.EmailBodyContext;
+import com.redhat.bpms.demo.fsi.onboarding.model.Party;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -43,9 +46,13 @@ public class EmailBodyBuilder {
 			long processInstanceId = bodyContext.getKcontext().getProcessInstance().getId();
 			String accountManager = bodyContext.getAccountManager();
 			String client = bodyContext.getClient().getName();
+			Party party = bodyContext.getClient().getRelatedParties().stream().findFirst().get().getParty();
+			String name = party.getName();
+			String surname = party.getSurname();
+			String email = party.getEmail();
 			
 			Map<String, Object> mapper = getFreemarkerPlaceholderValues(processInstanceId, parentProcessInstanceId,
-					accountManager, client,  buildUrl(parentProcessInstanceId));
+					accountManager, client,  buildUrl(parentProcessInstanceId, name, surname, client, email));
 			template.process(mapper, writer);
 		} catch (TemplateException | IOException e) {
 			String message = "Unable to transform email body.";
@@ -73,8 +80,8 @@ public class EmailBodyBuilder {
 		return map;
 	}
 	
-	private static String buildUrl(long id) { 
-		return environment.getEntandoBaseUrl() + "en/applicant?pid=" + id;
+	private static String buildUrl(long id, String name, String surname, String company, String email) throws UnsupportedEncodingException {
+		return environment.getEntandoBaseUrl() + "en/applicant.page?pid=" + id + "&fname=" + URLEncoder.encode(name, "UTF-8") + "&lame=" + URLEncoder.encode(surname, "UTF-8") + "&company=" + URLEncoder.encode(company, "UTF-8") + "&email=" + URLEncoder.encode(email, "UTF-8");
 	}
 
 }

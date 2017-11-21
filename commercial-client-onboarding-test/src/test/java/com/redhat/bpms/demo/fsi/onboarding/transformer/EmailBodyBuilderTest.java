@@ -1,5 +1,8 @@
 package com.redhat.bpms.demo.fsi.onboarding.transformer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 import org.kie.api.definition.process.Process;
 import org.kie.api.runtime.KieRuntime;
@@ -9,6 +12,8 @@ import org.kie.api.runtime.process.ProcessInstance;
 
 import com.redhat.bpms.demo.fsi.onboarding.model.Client;
 import com.redhat.bpms.demo.fsi.onboarding.model.EmailBodyContext;
+import com.redhat.bpms.demo.fsi.onboarding.model.Party;
+import com.redhat.bpms.demo.fsi.onboarding.model.RelatedParty;
 
 public class EmailBodyBuilderTest {
 
@@ -107,7 +112,20 @@ public class EmailBodyBuilderTest {
 		
 		Client client = new Client();
 		client.setName("Cool Client");
+		List<RelatedParty> relatedParties = new ArrayList<>();
+		client.setRelatedParties(relatedParties);
 		
+		Party party = new Party();
+		party.setName("Duncan");
+		party.setSurname("Doyle");
+		party.setEmail("ddoyle@redhat.com");
+		party.setSsn("123456789");
+		
+		RelatedParty rp = new RelatedParty();
+		rp.setParty(party);
+		rp.setRelationship("Technical Marketing Manager");
+		
+		client.getRelatedParties().add(rp);
 		
 		EmailBodyContext context = new EmailBodyContext(pContext, client, "prakash");
 		
@@ -119,3 +137,4 @@ public class EmailBodyBuilderTest {
 	
 	
 }
+

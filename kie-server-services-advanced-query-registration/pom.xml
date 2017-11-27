@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.kie.server</groupId>
+    <artifactId>kie-server-services</artifactId>
+    <version>6.5.0.Final-redhat-15</version>
+  </parent>
+
+  <artifactId>kie-server-services-advanced-query-registration</artifactId>
+
+  <name>KIE :: Execution Server :: Services :: Advanced Query Registration</name>
+  <description>KIE Execution Server Advanced Query Registration Extension</description>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.kie.server</groupId>
+      <artifactId>kie-server-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.kie.server</groupId>
+      <artifactId>kie-server-services-common</artifactId>
+      <exclusions>
+        <exclusion>
+          <!-- Collides with xml-apis:xml-apis -->
+          <groupId>javax.xml.stream</groupId>
+          <artifactId>stax-api</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    
+    <dependency>
+    	<groupId>org.jbpm</groupId>
+    	<artifactId>jbpm-services-api</artifactId>
+    </dependency>
+    
+    <dependency>
+    	<groupId>org.jbpm</groupId>
+    	<artifactId>jbpm-kie-services</artifactId>
+    </dependency>
+    
+    <dependency>
+    	<groupId>org.kie.server</groupId>
+    	<artifactId>kie-server-services-jbpm</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
+
+  </dependencies>
+
+</project>
